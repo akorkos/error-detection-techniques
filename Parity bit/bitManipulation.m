@@ -1,4 +1,4 @@
-function msg = bitManipulation(msg, i = 1, j)
+function msg = bitManipulation(msg, i, j)
   if (msg(i, j))
     msg(i, j) = 0;
   else

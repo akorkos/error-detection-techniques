@@ -1,18 +1,21 @@
 function msg = compute2dParity(msg, N, M)
-  for i = 1 : N
+# μετράει των αριθμό των άσσων κάθε γραμμής
+for i = 1 : N
   countOnes = 0;
   for j = 1 : M
     if (msg(i ,j))
       countOnes = countOnes + 1;
     endif
   endfor
-  if (mod(countOnes, 2) == 0)
+  if (mod(countOnes, 2) == 0) # σε περίπτωση που είναι άρτιος, 
+    # προσθέτει σε μια νέα στήλη με δείκτη (i, M + 1) ένα μηδενικό
     msg(i, M + 1) = 0;
-  else
+  else # διαφορετικά προσθέτει 1
     msg(i, M + 1) = 1;
   endif
 endfor
 
+# μετράει των αριθμό των άσσων κάθε στήλης
 for i = 1 : M + 1
   countOnes = 0;
   for j = 1 : N
@@ -20,9 +23,10 @@ for i = 1 : M + 1
       countOnes = countOnes + 1;
     endif
   endfor
-  if (mod(countOnes, 2) == 0)
+  if (mod(countOnes, 2) == 0) # σε περίπτωση που είναι άρτιος, 
+    # προσθέτει σε μια νέα γραμμή με δείκτη (N + 1, i) ένα μηδενικό
     msg(N + 1, i) = 0;
-  else
+  else # διαφορετικά προσθέτει 1
     msg(N + 1, i) = 1;
   endif
 endfor

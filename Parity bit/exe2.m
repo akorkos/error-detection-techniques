@@ -8,7 +8,13 @@ endwhile
 
 msg = computeParity(msg);
 
-msg = bitManipulation(msg, 6);
+if (validateParity(msg))
+  disp("Το μήνυμα δεν έχει υποστεί αλλοίωση.");
+else
+  disp("Το μήνυμα έχει υποστεί αλλοίωση.");
+endif
+
+msg = bitManipulation(msg, 1, 6);
 
 if (validateParity(msg))
   disp("Το μήνυμα δεν έχει υποστεί αλλοίωση.");
@@ -16,7 +22,7 @@ else
   disp("Το μήνυμα έχει υποστεί αλλοίωση.");
 endif
 
-msg = bitManipulation(msg, 12);
+msg = bitManipulation(msg, 1, 12);
 
 if (validateParity(msg))
   disp("Το μήνυμα δεν έχει υποστεί αλλοίωση.");
