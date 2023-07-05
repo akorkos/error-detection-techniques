@@ -106,7 +106,7 @@ class Data:
 
 if __name__ == "__main__": 
     statData = []
-    N = 100000
+    N = 1000
     for i in range(N):
         senderMsg = Sender(20, "110101").encode()
         channelTransmittedMsg = Channel(senderMsg, 10 ** -3).dataTransmission()

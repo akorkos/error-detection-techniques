@@ -16,7 +16,7 @@ if (isValid)
   disp("Το μήνυμα δεν έχει υποστεί αλλοίωση.");
 else
   disp("Το μήνυμα έχει υποστεί αλλοίωση.");
-endif
+end
 
 msgMatrix = bitManipulation(msgMatrix, 2, 3);
 
@@ -26,7 +26,7 @@ if (isValid)
   disp("Το μήνυμα δεν έχει υποστεί αλλοίωση.");
 else
   disp("Το μήνυμα έχει υποστεί αλλοίωση.");
-endif
+end
 
 msgMatrix = bitManipulation(msgMatrix, 2, 5);
 
@@ -36,4 +36,4 @@ if (isValid)
   disp("Το μήνυμα δεν έχει υποστεί αλλοίωση.");
 else
   disp("Το μήνυμα έχει υποστεί αλλοίωση.");
-endif
+end

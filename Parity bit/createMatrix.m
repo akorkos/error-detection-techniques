@@ -7,7 +7,7 @@ function msgMatrix = createMatrix(msg, M, len)
     if (mod(k, M) == 0)
       i = i + 1;
       j = 0;
-    endif
+    end
     j = j + 1;
-  endfor
-endfunction
+  end
+end
